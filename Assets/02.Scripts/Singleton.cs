@@ -27,7 +27,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         if (_instance != null)
         {
@@ -42,12 +42,5 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         {
             DontDestroyOnLoad(this.gameObject);
         }
-
-        Init();
-    }
-
-    protected virtual void Init()
-    {
-        
     }
 }
