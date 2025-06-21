@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GrabbableSetter
 {
-    public void SetItem(Transform transform, Rigidbody rigidbody)
+    public void SetGrabbable(Transform transform, Rigidbody rigidbody)
     {
         // Grabbable 세팅
         Grabbable grabbable = transform.gameObject.AddComponent<Grabbable>();
