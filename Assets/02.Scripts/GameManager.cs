@@ -10,11 +10,13 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private AudioSource sfxAudioSource;
     [SerializeField] private AudioSource bgmAudioSource;
 
-    public readonly int dirScore = 2;
+    public int dirScore;
     public int currentScore = 0;
         
     private void Start()
     {
+        dirScore = CustomerManager.Instance.customerRoots.Count;
+        
         InitEvents();
     }
     

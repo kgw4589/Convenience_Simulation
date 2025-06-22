@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7520723505309d4d8edc9d83195d9a1, type: 3}
-  m_Name: DambaeStory
+  m_Name: MalboroStory
   m_EditorClassIdentifier: 
   storyType: 0
   nextScene: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
       audioClip: {fileID: 0}
       soundVolume: 0
       isLoopSound: 0
-      sentence: "\uB9D0\uBCF4\uB85C.\uB808\uB4DC."
+      sentence: "\uB9D0\uBCF4\uB85C.\uACE8\uB4DC."
       useTyping: 0
       useDefaultTypeDelay: 0
       typeDelay: 0
