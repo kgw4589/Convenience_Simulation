@@ -46,7 +46,7 @@ MonoBehaviour:
       audioClip: {fileID: 0}
       soundVolume: 0
       isLoopSound: 0
-      sentence: "\uCC38.\uC798\uD588\uC5B4\uC694."
+      sentence: "\uCC38.\uC798\uD588\uC5B4."
       useTyping: 1
       useDefaultTypeDelay: 1
       typeDelay: 0

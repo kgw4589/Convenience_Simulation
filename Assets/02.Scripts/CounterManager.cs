@@ -92,7 +92,7 @@ public class CounterManager : Singleton<CounterManager>
             return;
         }
         
-        ClearItem();
+        DisableScannedItem();
         _equippedCard.SetActive(false);
     }
 
@@ -103,8 +103,27 @@ public class CounterManager : Singleton<CounterManager>
             Destroy(itemNameParent.GetChild(i).gameObject);
             Destroy(itemPriceParent.GetChild(i).gameObject);
 
+            _scannedItems[i].InitItem();
+        }
+
+        totalText.text = "0";
+        
+        _scannedItems.Clear();
+        
+        _totalPrice = 0;
+    }
+
+    public void DisableScannedItem()
+    {
+        for (int i = 0; i < _scannedItems.Count; i++)
+        {
+            Destroy(itemNameParent.GetChild(i).gameObject);
+            Destroy(itemPriceParent.GetChild(i).gameObject);
+
             _scannedItems[i].gameObject.SetActive(false);
         }
+
+        totalText.text = "0";
         
         _scannedItems.Clear();
         
