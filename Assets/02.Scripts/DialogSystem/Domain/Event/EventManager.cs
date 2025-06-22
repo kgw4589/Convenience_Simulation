@@ -13,6 +13,7 @@ public class EventManager : Singleton<EventManager>
         { EventElementData.EventType.PlaySound , () => new SoundPlayEvent() },
         { EventElementData.EventType.PlayAnime , () => new ObjectAnimationPlayEvent() },
         { EventElementData.EventType.PlayDialog , () => new DialogPlayEvent() },
+        { EventElementData.EventType.MoveObject , () => new ObjectMoveEvent() },
         { EventElementData.EventType.SetActiveObject , () => new ObjectActiveSetEvent() },
         { EventElementData.EventType.ShakeObject , () => new ObjectShakeEvent() },
         

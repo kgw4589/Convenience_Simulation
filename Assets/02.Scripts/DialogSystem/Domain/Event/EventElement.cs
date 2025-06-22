@@ -25,6 +25,7 @@ public class EventElementData
         PlaySound,
         PlayAnime,
         PlayDialog,
+        MoveObject,
         SetActiveObject,
         ShakeObject,
         ShowImage,
@@ -50,6 +51,19 @@ public class EventElementData
     public float audioVolume = 1.0f;
     
     #endregion
+    
+    #region Data-MoveObject
+
+    [DrawIf("myEventType", EventType.MoveObject)]
+    public Transform moveTargetTransform;
+    
+    [DrawIf("myEventType", EventType.MoveObject)]
+    public Transform moveDirTransform;
+
+    [DrawIf("myEventType", EventType.MoveObject)]
+    public float moveDuration;
+    
+    #endregion
 
     #region Data-PlayAnime
     [DrawIf("myEventType", EventType.PlayAnime)]
@@ -73,17 +87,7 @@ public class EventElementData
     
     [DrawIf("myEventType", EventType.SetActiveObject)]
     public string targetObjectName;
-
-    [DrawIf("myEventType", EventType.SetActiveObject)]
-    public bool objectsCheckValue;
     
-    #endregion
-    
-    #region Data-ShowImage
-    [DrawIf("myEventType", EventType.ShowImage)]
-    public Sprite showImage;         // 출력 이미지
-    [DrawIf("myEventType", EventType.ShowImage)]
-    public float showDuration;      // 출력 시간
     #endregion
 
     #region Data-PlayerCamera
@@ -92,16 +96,16 @@ public class EventElementData
     public Transform shakeTarget;                         // 흔들릴 대상 오브젝트
 
     [DrawIf("myEventType", EventType.ShakeObject)]
-    public float shakeDuration = 0.2f;                    // 흔들리는 시간 (초) - 추천: 0.5 ~ 2.0
+    public float shakeDuration = 0.5f;                    // 흔들리는 시간 (초) - 추천: 0.5 ~ 2.0
 
     [DrawIf("myEventType", EventType.ShakeObject)]
-    public float amplitudeGain = 1.0f;                    // 흔들림 세기 (진폭) - 추천: 0.05 ~ 0.5
+    public float amplitudeGain = 0.05f;                    // 흔들림 세기 (진폭) - 추천: 0.05 ~ 0.5
 
     [DrawIf("myEventType", EventType.ShakeObject)]
-    public float frequencyGain = 1.0f;                    // 초당 흔들림 횟수 (빈도) - 추천: 10 ~ 60
+    public float frequencyGain = 10f;                    // 초당 흔들림 횟수 (빈도) - 추천: 10 ~ 60
 
     [DrawIf("myEventType", EventType.ShakeObject)]
-    public float lossRate = 0.5f;                         // 감쇠율 (진폭이 줄어드는 속도) - 추천: 1.0 ~ 5.0
+    public float lossRate = 1.0f;                         // 감쇠율 (진폭이 줄어드는 속도) - 추천: 1.0 ~ 5.0
 
     #endregion
 }

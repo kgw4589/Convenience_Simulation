@@ -20,26 +20,32 @@ public class ObjectShakeEvent : IEventable
 
     private IEnumerator ShakeObject(Transform target, float duration, float amplitude, float frequency, float lossRate)
     {
-        if (!target)
-        {
-            yield break;
-        }
+        if (!target) yield break;
 
         Vector3 originalPos = target.localPosition;
         float elapsed = 0f;
 
+        float shakeInterval = 1f / frequency;
+        float shakeTimer = 0f;
+
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
+            shakeTimer += Time.deltaTime;
 
-            float currentAmplitude = amplitude * Mathf.Exp(-lossRate * elapsed); // 감쇠
-            float offsetX = (Random.value * 2 - 1) * currentAmplitude;
-            float offsetY = (Random.value * 2 - 1) * currentAmplitude;
-            float offsetZ = (Random.value * 2 - 1) * currentAmplitude;
+            if (shakeTimer >= shakeInterval)
+            {
+                shakeTimer = 0f;
 
-            target.localPosition = originalPos + new Vector3(offsetX, offsetY, offsetZ);
+                float currentAmplitude = amplitude * Mathf.Exp(-lossRate * elapsed);
+                float offsetX = (Random.value * 2 - 1) * currentAmplitude;
+                float offsetY = (Random.value * 2 - 1) * currentAmplitude;
+                float offsetZ = (Random.value * 2 - 1) * currentAmplitude;
 
-            yield return new WaitForSeconds(1f / frequency);
+                target.localPosition = originalPos + new Vector3(offsetX, offsetY, offsetZ);
+            }
+
+            yield return null; // 매 프레임마다 실행
         }
 
         target.localPosition = originalPos;
