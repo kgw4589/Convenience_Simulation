@@ -12,7 +12,7 @@ public class CounterManager : Singleton<CounterManager>
     public Transform overlapOrigin;
     public LayerMask checkingLayer;
     private float _overlapRadius = 1f;
-    private GameObject _equippedCard;
+    private GameObject _equippedCard = null;
     
     [Header("모니터에 출력될 것들 관련")]
     public Text itemInfoTextFactory;
@@ -41,6 +41,7 @@ public class CounterManager : Singleton<CounterManager>
         base.Awake();
 
         _totalPrice = 0;
+        _equippedCard = null;
     }
 
     public void OnScanBarcode(BaseItem item)
@@ -79,9 +80,14 @@ public class CounterManager : Singleton<CounterManager>
         _equippedCard = null;
     }
 
+    public bool IsBuyOk()
+    {
+        return _equippedCard != null && _scannedItems.Count >= 1;
+    }
+
     public void OnOk()
     {
-        if (!_equippedCard)
+        if (!IsBuyOk())
         {
             return;
         }

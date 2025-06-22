@@ -6,6 +6,8 @@ public class MopController : BaseGrabbableObject
 {
     public LayerMask checkingLayer;
 
+    private bool _isPlayed = false;
+
     private AudioSource _audioSource;
     [SerializeField] private AudioClip cleaningSound;
 
@@ -14,21 +16,23 @@ public class MopController : BaseGrabbableObject
         base.Awake();
 
         _audioSource = GetComponent<AudioSource>();
+
+        _isPlayed = false;
     }
     
     private void OnTriggerEnter(Collider other)
     {
-        if (!GameManager.Instance.IsValidLayer(other.gameObject, checkingLayer))
+        if (!GameManager.Instance.IsValidLayer(other.gameObject, checkingLayer) || _isPlayed)
         {
             return;
         }
         
-        // 레이어 맞으면 실행
         if (cleaningSound)
         {
             _audioSource.PlayOneShot(cleaningSound);
         }
 
+        _isPlayed = true;
         StartCoroutine(OnCleaning(other.gameObject));
     }
 
@@ -39,7 +43,7 @@ public class MopController : BaseGrabbableObject
         {
             yield break;
         }
-        
+
         Material mat = renderer.material;
         if (!mat.HasProperty("_Color"))
         {
@@ -61,7 +65,8 @@ public class MopController : BaseGrabbableObject
             yield return null;
         }
 
-        target.SetActive(false);
+        CustomerManager.Instance.currentCustomer.OnStart();
+        Destroy(target);
     }
 
     private void SetMaterialToFadeMode(Material mat)

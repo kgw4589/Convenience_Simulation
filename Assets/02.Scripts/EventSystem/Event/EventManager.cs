@@ -15,6 +15,7 @@ public class EventManager : Singleton<EventManager>
         { EventElementData.EventType.PlayDialog, () => new DialogPlayEvent() },
         { EventElementData.EventType.MoveObject, () => new ObjectMoveEvent() },
         { EventElementData.EventType.SetActiveObject, () => new ObjectActiveSetEvent() },
+        { EventElementData.EventType.InstantiateObject, () => new ObjectInstantiateEvent() },
         { EventElementData.EventType.ShakeObject, () => new ObjectShakeEvent() },
         { EventElementData.EventType.CustomerControl, () => new CustomerControlEvent() },
     };

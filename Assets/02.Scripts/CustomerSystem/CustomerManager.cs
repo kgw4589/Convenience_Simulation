@@ -2,15 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CustomerManager : Singleton<CustomerManager>
 {
     public List<CustomerRootInfo> customerRoots = new List<CustomerRootInfo>();
     public Transform customerOrigin;
 
-    public bool isBuyOk = false;
+    public BaseCustomer currentCustomer;
 
-    private BaseCustomer _currentCustomer;
+    public bool isBuyOk = false;
 
     private float _readyDelay = 2f;
     
@@ -33,31 +34,31 @@ public class CustomerManager : Singleton<CustomerManager>
         GameObject customer = Instantiate(currentCustomerInfo.customerFactory);
         customer.transform.position = customerOrigin.position;
         customer.transform.rotation = customerOrigin.rotation;
-        _currentCustomer = customer.GetComponent<BaseCustomer>();
+        currentCustomer = customer.GetComponent<BaseCustomer>();
         
         for (int i = 0; i < currentCustomerInfo.enableEvents.Count; i++)
         {
             currentCustomerInfo.enableEvents[i].SetActive(true);
         }
         
-        _currentCustomer.OnReady(currentCustomerInfo.rootPositions);
+        currentCustomer.OnReady(currentCustomerInfo.rootPositions);
     }
 
     public void StartCustomer()
     {
-        _currentCustomer.OnStart();
+        currentCustomer.OnStart();
     }
 
     public void EndCustomer()
     {
-        _currentCustomer.OnEnd();
+        currentCustomer.OnEnd();
     }
 
     public void EndCustomerByBuy()
     {
-        if (isBuyOk)
+        if (isBuyOk && CounterManager.Instance.IsBuyOk())
         {
-            _currentCustomer.OnStart();
+            currentCustomer.OnStart();
         }
     }
 }

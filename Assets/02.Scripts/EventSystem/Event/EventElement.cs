@@ -27,6 +27,7 @@ public class EventElementData
         PlayDialog,
         MoveObject,
         SetActiveObject,
+        InstantiateObject,
         ShakeObject,
         CustomerControl,
     }
@@ -66,13 +67,20 @@ public class EventElementData
     #endregion
 
     #region Data-PlayAnime
+    
     [DrawIf("myEventType", EventType.PlayAnime)]
+    public bool isCurrentCustomer = true;
+
+    [DrawIf("myEventType", EventType.PlayAnime)]
+    [DrawIf("isCurrentCustomer", false)]
     public Animator objectAnimator;
+    
     [FormerlySerializedAs("paramName")] [DrawIf("myEventType", EventType.PlayAnime)]
     public string animParamName;
+    
     #endregion
 
-    #region Data-PlayDialogData
+    #region Data-PlayDialog
     [DrawIf("myEventType", EventType.PlayDialog)]
     public StoryScene storyScene;
     #endregion
@@ -87,6 +95,16 @@ public class EventElementData
     
     [DrawIf("myEventType", EventType.SetActiveObject)]
     public string targetObjectName;
+    
+    #endregion
+
+    #region Data-ObjectInstantiate
+
+    [DrawIf("myEventType", EventType.InstantiateObject)]
+    public GameObject objectFactory;
+
+    [DrawIf("myEventType", EventType.InstantiateObject)]
+    public Transform instantiateOrigin;
     
     #endregion
 
