@@ -4,17 +4,11 @@ public class Scanner : MonoBehaviour
 {
     public Transform rayOrigin;
     
-    private AudioSource _audioSource;
     public AudioClip interactSound;
     
     public LayerMask checkingLayerMask;
 
     private float _rayRange = 0.7f;
-
-    private void Awake()
-    {
-        _audioSource = GetComponent<AudioSource>();
-    }
     
     private void Update()
     {
@@ -33,7 +27,7 @@ public class Scanner : MonoBehaviour
 
                 if (interactSound)
                 {
-                    _audioSource.PlayOneShot(interactSound);
+                    GameManager.Instance.PlaySfx(interactSound);
                 }
             }
         }

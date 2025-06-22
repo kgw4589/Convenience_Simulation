@@ -18,6 +18,8 @@ public class CounterManager : Singleton<CounterManager>
     public Text itemInfoTextFactory;
     public Text totalText;
 
+    public AudioClip chaChingSound;
+
     private List<BaseItem> _scannedItems = new List<BaseItem>();
 
     private int _totalPrice = 0;
@@ -91,6 +93,8 @@ public class CounterManager : Singleton<CounterManager>
         {
             return;
         }
+        
+        GameManager.Instance.PlaySfx(chaChingSound);
         
         DisableScannedItem();
         _equippedCard.SetActive(false);

@@ -9,16 +9,12 @@ public class MopController : BaseGrabbableObject
 
     private bool _isPlayed = false;
 
-    private AudioSource _audioSource;
     [SerializeField] private AudioClip cleaningSound;
-    
     [SerializeField] private List<EventElementData> myEvent;
 
     protected override void Awake()
     {
         base.Awake();
-
-        _audioSource = GetComponent<AudioSource>();
 
         _isPlayed = false;
     }
@@ -29,13 +25,9 @@ public class MopController : BaseGrabbableObject
         {
             return;
         }
-        
-        if (cleaningSound)
-        {
-            _audioSource.PlayOneShot(cleaningSound);
-        }
 
         _isPlayed = true;
+        GameManager.Instance.PlaySfx(cleaningSound);
         StartCoroutine(OnCleaning(other.gameObject));
     }
 
