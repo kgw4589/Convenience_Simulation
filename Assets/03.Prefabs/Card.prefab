@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1012105378410156059}
   - component: {fileID: 8340765415907962662}
   - component: {fileID: 654434221551680452}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: isdk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 2529571512019840173}
   - component: {fileID: 3826390089991215578}
   - component: {fileID: 1650773536843576679}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 8630017616636023339}
   - component: {fileID: 8179453669125149370}
   - component: {fileID: 7784965579196129810}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SnapInteractable
   m_TagString: Untagged
   m_Icon: {fileID: 0}

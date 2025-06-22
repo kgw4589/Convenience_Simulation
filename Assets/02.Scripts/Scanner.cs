@@ -29,9 +29,7 @@ public class Scanner : MonoBehaviour
                     return;
                 }
                 
-                ItemInfoScriptable itemInfo = item.OnScanBarcode();
-                
-                CounterManager.Instance.OnScanBarcode(itemInfo);
+                CounterManager.Instance.OnScanBarcode(item);
 
                 if (interactSound)
                 {
