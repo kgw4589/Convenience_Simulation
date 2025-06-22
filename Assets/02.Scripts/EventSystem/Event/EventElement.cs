@@ -28,7 +28,7 @@ public class EventElementData
         MoveObject,
         SetActiveObject,
         ShakeObject,
-        ShowImage,
+        CustomerControl,
     }
     
     public EventType myEventType;
@@ -106,6 +106,20 @@ public class EventElementData
 
     [DrawIf("myEventType", EventType.ShakeObject)]
     public float lossRate = 1.0f;                         // 감쇠율 (진폭이 줄어드는 속도) - 추천: 1.0 ~ 5.0
+
+    #endregion
+    
+    #region Data-CustomerControl
+
+    public enum CustomerControlType
+    {
+        Ready,
+        Start,
+        End,
+    }
+
+    [DrawIf("myEventType", EventType.CustomerControl)]
+    public CustomerControlType customerControlType;
 
     #endregion
 }

@@ -97,7 +97,7 @@ public class CounterManager : Singleton<CounterManager>
             Destroy(itemNameParent.GetChild(i).gameObject);
             Destroy(itemPriceParent.GetChild(i).gameObject);
 
-            _scannedItems[i].InitItem();
+            _scannedItems[i].gameObject.SetActive(false);
         }
         
         _scannedItems.Clear();

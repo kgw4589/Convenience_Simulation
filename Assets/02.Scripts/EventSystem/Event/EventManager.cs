@@ -16,6 +16,7 @@ public class EventManager : Singleton<EventManager>
         { EventElementData.EventType.MoveObject, () => new ObjectMoveEvent() },
         { EventElementData.EventType.SetActiveObject, () => new ObjectActiveSetEvent() },
         { EventElementData.EventType.ShakeObject, () => new ObjectShakeEvent() },
+        { EventElementData.EventType.CustomerControl, () => new CustomerControlEvent() },
     };
 
     public void PlayEvent(EventElement eventElement)
@@ -80,7 +81,7 @@ public class EventManager : Singleton<EventManager>
                 time = 0;
             }
         }
-        
+
         onComplete?.Invoke();
     }
 }

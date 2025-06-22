@@ -7,6 +7,14 @@ public class GameManager : Singleton<GameManager>
     
     [SerializeField] private AudioSource sfxAudioSource;
     [SerializeField] private AudioSource bgmAudioSource;
+
+    public readonly int dirScore = 5;
+    public int currentScore = 0;
+        
+    private void Start()
+    {
+        InitEvents();
+    }
     
     public bool IsValidLayer(GameObject target, LayerMask layerMask)
     {
@@ -40,11 +48,26 @@ public class GameManager : Singleton<GameManager>
         bgmAudioSource.volume = 1f;
         bgmAudioSource.loop = false;
     }
-}
+    
+    public void InitEvents()
+    {
+        for (int i = 0; i < allEvents.Count; i++)
+        {
+            allEvents[i].SetActive(false);
+        }
+        
+        CustomerManager.Instance.ReadyCustomer();
+    }
 
-public class CustomerRoot
-{
-    public GameObject customer;
-    public List<Transform> rootPositions;
-    public List<GameObject> enableEvents;
+    public void ClearCustomer()
+    {
+        ++currentScore;
+
+        if (currentScore >= dirScore)
+        {
+            return;
+        }
+        
+        InitEvents();
+    }
 }

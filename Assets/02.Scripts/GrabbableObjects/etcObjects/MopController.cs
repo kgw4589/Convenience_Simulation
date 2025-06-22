@@ -39,7 +39,7 @@ public class MopController : BaseGrabbableObject
         {
             yield break;
         }
-
+        
         Material mat = renderer.material;
         if (!mat.HasProperty("_Color"))
         {
@@ -61,7 +61,7 @@ public class MopController : BaseGrabbableObject
             yield return null;
         }
 
-        Destroy(target);
+        target.SetActive(false);
     }
 
     private void SetMaterialToFadeMode(Material mat)
