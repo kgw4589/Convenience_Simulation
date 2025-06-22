@@ -14,6 +14,6 @@ public class ObjectAnimationPlayEvent : IEventable
             animator = CustomerManager.Instance.currentCustomer.GetComponent<Animator>();
         }
         
-        eventElement.objectAnimator.SetTrigger(eventElement.animParamName);
+        animator.SetTrigger(eventElement.animParamName);
     }
 }

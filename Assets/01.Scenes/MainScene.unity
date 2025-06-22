@@ -3201,7 +3201,7 @@ PrefabInstance:
       objectReference: {fileID: -3661639628750336703, guid: 259354985de11684da6eb69985b44857, type: 3}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].lossRate
@@ -3226,7 +3226,7 @@ PrefabInstance:
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].storyScene
       value: 
-      objectReference: {fileID: 11400000, guid: 145fc64e00260aa4e9fc5331667ed815, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].storyScene
       value: 
@@ -3241,7 +3241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].myEventType
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].myEventType
@@ -3254,6 +3254,10 @@ PrefabInstance:
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[3].myEventType
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[1].animParamName
+      value: SetMove
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].amplitudeGain
@@ -3273,7 +3277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].setActiveValue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].setActiveValue
@@ -3296,12 +3300,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1957800276}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[1].isCurrentCustomer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].customerControlType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].moveTargetTransform
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[1].customerControlType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].moveTargetTransform
@@ -3318,7 +3330,7 @@ PrefabInstance:
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].setActiveTargetObject
       value: 
-      objectReference: {fileID: 571364698}
+      objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].setActiveTargetObject
       value: 
@@ -5643,6 +5655,55 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   cleaningSound: {fileID: 0}
+  myEvent:
+  - elementMemo: "\uCCAD\uC18C \uC0AC\uC6B4\uB4DC"
+    nextDelay: 0
+    myEventType: 0
+    soundType: 0
+    audioClip: {fileID: 0}
+    audioVolume: 1
+    moveTargetTransform: {fileID: 0}
+    moveDirTransform: {fileID: 0}
+    moveDuration: 0
+    isCurrentCustomer: 0
+    objectAnimator: {fileID: 0}
+    animParamName: 
+    storyScene: {fileID: 0}
+    setActiveTargetObject: {fileID: 0}
+    setActiveValue: 0
+    targetObjectName: 
+    objectFactory: {fileID: 0}
+    instantiateOrigin: {fileID: 0}
+    shakeTarget: {fileID: 0}
+    shakeDuration: 0
+    amplitudeGain: 0
+    frequencyGain: 0
+    lossRate: 0
+    customerControlType: 0
+  - elementMemo: 
+    nextDelay: 0
+    myEventType: 7
+    soundType: 0
+    audioClip: {fileID: 0}
+    audioVolume: 1
+    moveTargetTransform: {fileID: 0}
+    moveDirTransform: {fileID: 0}
+    moveDuration: 0
+    isCurrentCustomer: 0
+    objectAnimator: {fileID: 0}
+    animParamName: 
+    storyScene: {fileID: 0}
+    setActiveTargetObject: {fileID: 0}
+    setActiveValue: 0
+    targetObjectName: 
+    objectFactory: {fileID: 0}
+    instantiateOrigin: {fileID: 0}
+    shakeTarget: {fileID: 0}
+    shakeDuration: 0
+    amplitudeGain: 0
+    frequencyGain: 0
+    lossRate: 0
+    customerControlType: 1
 --- !u!65 &619005388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7175,7 +7236,7 @@ PrefabInstance:
       objectReference: {fileID: -3661639628750336703, guid: 259354985de11684da6eb69985b44857, type: 3}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].lossRate
@@ -7183,19 +7244,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].nextDelay
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[3].nextDelay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
-      propertyPath: elementData.Array.data[4].nextDelay
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
-      propertyPath: elementData.Array.data[5].nextDelay
+      propertyPath: elementData.Array.data[4].nextDelay
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[5].nextDelay
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[6].nextDelay
@@ -7235,15 +7296,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 145fc64e00260aa4e9fc5331667ed815, type: 2}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].myEventType
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].myEventType
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].myEventType
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].shakeTarget
@@ -7251,15 +7312,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[3].myEventType
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
-      propertyPath: elementData.Array.data[4].myEventType
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
-      propertyPath: elementData.Array.data[5].myEventType
+      propertyPath: elementData.Array.data[4].myEventType
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[5].myEventType
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[6].myEventType
@@ -7267,7 +7328,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[7].myEventType
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[0].animParamName
+      value: SetIdle
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].amplitudeGain
@@ -7280,6 +7345,10 @@ PrefabInstance:
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].shakeDuration
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[7].animParamName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].setActiveValue
@@ -7299,11 +7368,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[4].setActiveValue
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[5].setActiveValue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[6].setActiveValue
@@ -7316,47 +7385,63 @@ PrefabInstance:
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].moveDirTransform
       value: 
-      objectReference: {fileID: 2139626837}
+      objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].moveDirTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2139626837}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].moveDirTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[3].moveDirTransform
       value: 
       objectReference: {fileID: 538117261}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[4].moveDirTransform
       value: 
-      objectReference: {fileID: 652673024}
+      objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[5].moveDirTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 652673024}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[6].moveDirTransform
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
-      propertyPath: elementData.Array.data[0].moveTargetTransform
-      value: 
-      objectReference: {fileID: 571364703}
+      propertyPath: elementData.Array.data[0].isCurrentCustomer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
-      propertyPath: elementData.Array.data[1].moveTargetTransform
+      propertyPath: elementData.Array.data[7].isCurrentCustomer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[0].moveTargetTransform
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[1].moveTargetTransform
+      value: 
+      objectReference: {fileID: 571364703}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].moveTargetTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[3].moveTargetTransform
       value: 
       objectReference: {fileID: 238187581}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[4].moveTargetTransform
       value: 
-      objectReference: {fileID: 405105410}
+      objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[5].moveTargetTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 405105410}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[6].moveTargetTransform
       value: 
@@ -7364,7 +7449,7 @@ PrefabInstance:
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].setActiveTargetObject
       value: 
-      objectReference: {fileID: 571364698}
+      objectReference: {fileID: 803290265}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].setActiveTargetObject
       value: 
@@ -7372,7 +7457,7 @@ PrefabInstance:
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].setActiveTargetObject
       value: 
-      objectReference: {fileID: 238187580}
+      objectReference: {fileID: 571364698}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[3].setActiveTargetObject
       value: 
@@ -7380,7 +7465,7 @@ PrefabInstance:
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[4].setActiveTargetObject
       value: 
-      objectReference: {fileID: 405105405}
+      objectReference: {fileID: 238187580}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[5].setActiveTargetObject
       value: 
@@ -7388,7 +7473,7 @@ PrefabInstance:
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[6].setActiveTargetObject
       value: 
-      objectReference: {fileID: 803290265}
+      objectReference: {fileID: 405105405}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[7].setActiveTargetObject
       value: 
@@ -8196,7 +8281,7 @@ PrefabInstance:
       objectReference: {fileID: -3661639628750336703, guid: 259354985de11684da6eb69985b44857, type: 3}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].lossRate
@@ -8204,15 +8289,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].nextDelay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].nextDelay
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].nextDelay
-      value: 0.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[3].nextDelay
@@ -8236,15 +8321,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 145fc64e00260aa4e9fc5331667ed815, type: 2}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].myEventType
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].myEventType
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].myEventType
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].shakeTarget
@@ -8255,8 +8340,16 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[0].animParamName
+      value: SetIdle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].amplitudeGain
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[2].animParamName
+      value: SetMove
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].frequencyGain
@@ -8295,6 +8388,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[0].isCurrentCustomer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[2].isCurrentCustomer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].customerControlType
       value: 1
       objectReference: {fileID: 0}
@@ -8303,13 +8404,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 571364703}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[1].customerControlType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].moveTargetTransform
       value: 
-      objectReference: {fileID: 238187581}
+      objectReference: {fileID: 571364703}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[2].customerControlType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].moveTargetTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 571364703}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].setActiveTargetObject
       value: 
@@ -8317,11 +8426,11 @@ PrefabInstance:
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].setActiveTargetObject
       value: 
-      objectReference: {fileID: 238187580}
+      objectReference: {fileID: 571364698}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].setActiveTargetObject
       value: 
-      objectReference: {fileID: 238187580}
+      objectReference: {fileID: 571364698}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[3].setActiveTargetObject
       value: 
@@ -21223,7 +21332,7 @@ PrefabInstance:
       objectReference: {fileID: -3661639628750336703, guid: 259354985de11684da6eb69985b44857, type: 3}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].lossRate
@@ -21231,15 +21340,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].nextDelay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].nextDelay
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].nextDelay
-      value: 0.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[3].nextDelay
@@ -21263,15 +21372,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 145fc64e00260aa4e9fc5331667ed815, type: 2}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].myEventType
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].myEventType
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].myEventType
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].shakeTarget
@@ -21282,8 +21391,16 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[0].animParamName
+      value: SetIdle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].amplitudeGain
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[2].animParamName
+      value: SetMove
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].frequencyGain
@@ -21322,6 +21439,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[0].isCurrentCustomer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[2].isCurrentCustomer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].customerControlType
       value: 1
       objectReference: {fileID: 0}
@@ -21330,13 +21455,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 571364703}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[1].customerControlType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].moveTargetTransform
       value: 
-      objectReference: {fileID: 238187581}
+      objectReference: {fileID: 571364703}
+    - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
+      propertyPath: elementData.Array.data[2].customerControlType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].moveTargetTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 571364703}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[0].setActiveTargetObject
       value: 
@@ -21344,11 +21477,11 @@ PrefabInstance:
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[1].setActiveTargetObject
       value: 
-      objectReference: {fileID: 238187580}
+      objectReference: {fileID: 571364698}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[2].setActiveTargetObject
       value: 
-      objectReference: {fileID: 238187580}
+      objectReference: {fileID: 571364698}
     - target: {fileID: 6016207344247237672, guid: d1be0508e16c2114895b798aeb668f2f, type: 3}
       propertyPath: elementData.Array.data[3].setActiveTargetObject
       value: 

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MopController : BaseGrabbableObject
@@ -10,6 +11,8 @@ public class MopController : BaseGrabbableObject
 
     private AudioSource _audioSource;
     [SerializeField] private AudioClip cleaningSound;
+    
+    [SerializeField] private List<EventElementData> myEvent;
 
     protected override void Awake()
     {
@@ -65,7 +68,7 @@ public class MopController : BaseGrabbableObject
             yield return null;
         }
 
-        CustomerManager.Instance.currentCustomer.OnStart();
+        EventManager.Instance.PlayEventByData(myEvent);
         Destroy(target);
     }
 

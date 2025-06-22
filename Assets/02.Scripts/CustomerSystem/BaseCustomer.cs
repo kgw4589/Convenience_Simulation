@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -6,6 +5,8 @@ using UnityEngine.AI;
 public abstract class BaseCustomer : MonoBehaviour, ICustomerable
 {
     private NavMeshAgent _navMeshAgent;
+    private Animator _animator;
+    
     private List<Transform> _myRoot;
     private int _currentRootIndex = 0;
     
@@ -15,6 +16,7 @@ public abstract class BaseCustomer : MonoBehaviour, ICustomerable
         _currentRootIndex = 0;
 
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        _animator = GetComponent<Animator>();
         _navMeshAgent.isStopped = true;
     }
 
@@ -22,6 +24,7 @@ public abstract class BaseCustomer : MonoBehaviour, ICustomerable
     {
         _navMeshAgent.SetDestination(_myRoot[_currentRootIndex].position);
         _currentRootIndex += 1;
+        
         _navMeshAgent.isStopped = false;
     }
 
@@ -29,5 +32,10 @@ public abstract class BaseCustomer : MonoBehaviour, ICustomerable
     {
         GameManager.Instance.ClearCustomer();
         Destroy(gameObject);
+    }
+
+    public virtual void OnAnimationTrigger(string triggerName)
+    {
+        _animator.SetTrigger(triggerName);
     }
 }

@@ -59,6 +59,7 @@ public class CustomerManager : Singleton<CustomerManager>
         if (isBuyOk && CounterManager.Instance.IsBuyOk())
         {
             currentCustomer.OnStart();
+            currentCustomer.OnAnimationTrigger("SetMove");
         }
     }
 }
