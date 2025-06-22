@@ -76,10 +76,6 @@ public class EventElementData
 
     [DrawIf("myEventType", EventType.SetActiveObject)]
     public bool objectsCheckValue;
-
-    // [DrawIf("myEventType", EventType.SetActiveObject)]
-    [Header("DrawIf 애트리뷰트가 배열, 리스트 자료형은 처리하지 못하여 고치는 중입니다..;;")]
-    public GameObject[] setActiveCheckingObjects;
     
     #endregion
     

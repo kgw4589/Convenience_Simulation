@@ -1,10 +1,10 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogCanvas : MonoBehaviour
 {
-    public TextMeshProUGUI speakerText;
-    public TextMeshProUGUI sentenceText;
+    public Text speakerText;
+    public Text sentenceText;
     
     private void OnDisable()
     {

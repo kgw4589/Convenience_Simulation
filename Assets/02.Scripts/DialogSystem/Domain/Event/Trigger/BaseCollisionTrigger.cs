@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -6,6 +7,9 @@ using UnityEngine;
 public abstract class BaseCollisionTrigger : MonoBehaviour
 {
     [SerializeField] private LayerMask checkingLayer;
+
+    protected bool isEnterPlayed = false;
+    protected bool isExitPlayed = false;
     
     /// <summary>
     /// 충돌체 유효성 검사
@@ -15,15 +19,25 @@ public abstract class BaseCollisionTrigger : MonoBehaviour
     {
         return GameManager.Instance.IsValidLayer(other.gameObject, checkingLayer);
     }
-    
+
+    protected void OnEnable()
+    {
+        isEnterPlayed = false;
+        isExitPlayed = false;
+    }
+
     /// <summary>
     /// 충돌체가 트리거에 진입했을 때 호출
     /// </summary>
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if (!IsValidCollision(other)) return;
-        
+        if (!IsValidCollision(other) || isEnterPlayed)
+        {
+            return;
+        }
+
+        isEnterPlayed = true;
         TriggerEvent();
     }
 
@@ -33,8 +47,12 @@ public abstract class BaseCollisionTrigger : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
-        if (!IsValidCollision(other)) return;
+        if (!IsValidCollision(other) || isExitPlayed)
+        {
+            return;
+        }
 
+        isExitPlayed = true;
         TriggerExitEvent();
     }
 

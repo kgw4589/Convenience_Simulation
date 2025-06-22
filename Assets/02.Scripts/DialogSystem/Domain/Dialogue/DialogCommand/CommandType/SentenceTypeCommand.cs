@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class SentenceTypeCommand : ICommandable
 {
-    private const float TypeDelay = 0.03f;
+    private const float TypeDelay = 0.07f;
 
     public void PlayCommand(DialogCommandData dialogCommandData)
     {

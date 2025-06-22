@@ -38,33 +38,6 @@ public class DialogueManager : Singleton<DialogueManager>
     }
 
     /// <summary>
-    /// 다음 문장으로 넘어갈 준비가 된 상태 여부를 반환하는 함수 
-    /// </summary>
-    public bool IsCompleted()
-    {
-        return _isDelayFinish && _state == State.Completed;
-    }
-    
-    /// <summary>
-    /// 현재 문장이 해당 스토리의 마지막 문장인지 확인하는 함수.
-    /// </summary>
-    public bool IsLastSentence()
-    {
-        if (_commandIndex + 1 == currentScene.dialogCommands.Count)
-        {
-            return true;
-        }
-
-        if (currentScene.dialogCommands[_commandIndex].commandList[^1].commandType is CommandType.EndDialog
-            && _commandListIndex >= currentScene.dialogCommands[_commandIndex].commandList.Count)
-        {
-            return true;
-        }
-        
-        return false;
-    }
-
-    /// <summary>
     /// 한 스토리를 시작하는 함수.
     /// </summary>
     public void PlayScene(StoryScene scene)
@@ -78,7 +51,7 @@ public class DialogueManager : Singleton<DialogueManager>
     }
     
     /// <summary>
-    /// 비주얼 노벨 방식의 다음 문장을 실행시키는 함수.
+    /// 다음 문장을 실행시키는 함수.
     /// </summary>
     public void NextCommand()
     {
@@ -119,7 +92,7 @@ public class DialogueManager : Singleton<DialogueManager>
         // 모든 커멘드가 끝났을 때 다음 ID로 넘어갈 수 있도록.
         _isDelayFinish = true;
         
-        if (currentScene.storyType == StoryScene.StoryType.Movable)
+        if (currentScene.storyType is StoryScene.StoryType.Movable)
         {
             NextCommand();
         }

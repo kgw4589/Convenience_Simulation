@@ -1,3 +1,5 @@
+using UnityEngine;
+
 /// <summary>
 /// 다이얼로그 시작
 /// </summary>
@@ -17,5 +19,6 @@ public class DialogStartCommand : ICommandable
     {
         DialogCanvas canvas = DialogueManager.Instance.dialogCanvas;
         canvas.gameObject.SetActive(true);
+        Debug.Log(canvas.gameObject.activeSelf);
     }
 }
