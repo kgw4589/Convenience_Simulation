@@ -6,7 +6,7 @@ public class DialogCanvas : MonoBehaviour
     public Text speakerText;
     public Text sentenceText;
     
-    private void OnDisable()
+    private void OnEnable()
     {
         InitUI();
     }

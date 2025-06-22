@@ -87,7 +87,7 @@ public class CounterManager : Singleton<CounterManager>
         }
         
         ClearItem();
-        Destroy(_equippedCard);
+        _equippedCard.SetActive(false);
     }
 
     public void ClearItem()

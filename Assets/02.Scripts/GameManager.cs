@@ -4,11 +4,13 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     public List<GameObject> allEvents;
+
+    public StoryScene successStory;
     
     [SerializeField] private AudioSource sfxAudioSource;
     [SerializeField] private AudioSource bgmAudioSource;
 
-    public readonly int dirScore = 5;
+    public readonly int dirScore = 2;
     public int currentScore = 0;
         
     private void Start()
@@ -65,6 +67,7 @@ public class GameManager : Singleton<GameManager>
 
         if (currentScore >= dirScore)
         {
+            DialogueManager.Instance.PlayScene(successStory);
             return;
         }
         

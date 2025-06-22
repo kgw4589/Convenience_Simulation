@@ -27,14 +27,14 @@ public class CustomerManager : Singleton<CustomerManager>
     protected virtual IEnumerator WaitReady()
     {
         yield return new WaitForSeconds(_readyDelay);
-        
+
         CustomerRootInfo currentCustomerInfo = customerRoots[GameManager.Instance.currentScore];
         
         GameObject customer = Instantiate(currentCustomerInfo.customerFactory);
         customer.transform.position = customerOrigin.position;
         customer.transform.rotation = customerOrigin.rotation;
         _currentCustomer = customer.GetComponent<BaseCustomer>();
-
+        
         for (int i = 0; i < currentCustomerInfo.enableEvents.Count; i++)
         {
             currentCustomerInfo.enableEvents[i].SetActive(true);
