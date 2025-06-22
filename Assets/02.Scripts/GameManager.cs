@@ -1,10 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class GameManager : Singleton<GameManager>
 {
+    public List<GameObject> allEvents;
+    
     [SerializeField] private AudioSource sfxAudioSource;
     [SerializeField] private AudioSource bgmAudioSource;
     
@@ -40,4 +40,11 @@ public class GameManager : Singleton<GameManager>
         bgmAudioSource.volume = 1f;
         bgmAudioSource.loop = false;
     }
+}
+
+public class CustomerRoot
+{
+    public GameObject customer;
+    public List<Transform> rootPositions;
+    public List<GameObject> enableEvents;
 }

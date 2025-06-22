@@ -10,13 +10,12 @@ public class EventManager : Singleton<EventManager>
 {
     private readonly Dictionary<EventElementData.EventType, Func<IEventable>> _eventLogicDic = new()
     {
-        { EventElementData.EventType.PlaySound , () => new SoundPlayEvent() },
-        { EventElementData.EventType.PlayAnime , () => new ObjectAnimationPlayEvent() },
-        { EventElementData.EventType.PlayDialog , () => new DialogPlayEvent() },
-        { EventElementData.EventType.MoveObject , () => new ObjectMoveEvent() },
-        { EventElementData.EventType.SetActiveObject , () => new ObjectActiveSetEvent() },
-        { EventElementData.EventType.ShakeObject , () => new ObjectShakeEvent() },
-        
+        { EventElementData.EventType.PlaySound, () => new SoundPlayEvent() },
+        { EventElementData.EventType.PlayAnime, () => new ObjectAnimationPlayEvent() },
+        { EventElementData.EventType.PlayDialog, () => new DialogPlayEvent() },
+        { EventElementData.EventType.MoveObject, () => new ObjectMoveEvent() },
+        { EventElementData.EventType.SetActiveObject, () => new ObjectActiveSetEvent() },
+        { EventElementData.EventType.ShakeObject, () => new ObjectShakeEvent() },
     };
 
     public void PlayEvent(EventElement eventElement)
