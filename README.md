@@ -1,5 +1,11 @@
 # Convenience_Simulation
 
+## 프로젝트 기획서    
+- [프로젝트기획서_VR편의점시뮬레이션.pdf](https://github.com/user-attachments/files/21036568/_VR.hwp.pdf)         
+![Image](https://github.com/user-attachments/assets/983b0c0b-b35b-4801-af96-802cbe6c7bad)
+![Image](https://github.com/user-attachments/assets/ad8cedfc-e659-4887-bf0b-c39486e44431)
+![Image](https://github.com/user-attachments/assets/43ad3d29-950b-4de6-925f-43e033180302)
+
 # 라이선스
 
 본 프로젝트는 학습 목적의 **비상업적 용도**로 제작되었습니다.
